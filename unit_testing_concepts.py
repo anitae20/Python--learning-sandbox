@@ -1,6 +1,12 @@
 from abc import ABC,abstractmethod
+#abc is abstract base class
 
-class House:
+
+#class house should inherit things from abc
+
+
+class House(ABC):
+    @abstractmethod   #as soon as you do absract function the method below becomes abstract method 
     def BuilderDoor(self):
         print('Door is built in House')
 
@@ -18,7 +24,7 @@ class SmallHouse(House):
 class BigHouse(House):
     def BuilderDoor(self):
             #print('Door is built in Big House')
-        super().BuildDoor()
+        super().BuildDoor
     def BuildWindow(self):
                 print("Window is built in  the Big house")
 
